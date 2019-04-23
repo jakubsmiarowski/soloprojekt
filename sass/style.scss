@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans');
 @import "variables";
 @import "mixins";
 @import "normalize";
@@ -14,3 +15,9 @@
 /* Pages / Views */
 
 @import "pages/registration";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $paragraph-font;
+}
