@@ -2,7 +2,9 @@
     height: 100vh;
     width: 200px;
     background-color: #191919;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 3;
     .logo-bar {
         width: 100%;
@@ -32,20 +34,27 @@
     .sections {
         width: 100%;
         height: 300px;
-        margin: 15px 0;
         border-bottom: 1px solid $paragraph-color;
         .section {
             text-decoration: none;
             background-color: inherit;
             color: $paragraph-color;
-            padding: 10px 0;
-            margin: 0 auto;
+            padding: 10px 0 10px 10px;
+            cursor: pointer;
+            &:hover {
+                background-color: #282828;
+                color: $hover-color;
+                border-left: 5px solid $orange;
+                svg {
+                    fill: $hover-color;
+                }
+            }
         }
-        .section img {
-            height: 20px;
-            width: 20px;
+        .section svg {
+            height: 22px;
+            width: 22px;
             float: left;
-            fill: $hover-color;
+            fill: $paragraph-color;
             padding-right: 10px;
             margin-left: 15px;
         }
@@ -86,29 +95,68 @@
     position: fixed;
     top: 0;
     left: 0;
+    border-bottom: 1px solid $paragraph-color;
     .wallet {
         border-right: 1px solid $paragraph-color;
         border-left: 1px solid $paragraph-color;
-        position: absolute;
-        top: 0;
-        left: 60%;
+        color: $paragraph-color;
+        float: right;
         padding: 10px 20px;
         height: 100%;
+        &:hover {
+            cursor: pointer;
+        }
     }
-    .wallet img {
-        height: 20px;
-        width: 20px;
+    .wallet svg {
+        height: 22px;
+        width: 22px;
         padding: 0 5px;
+        fill: $paragraph-color;
     }
     .notification {
-        border-right: 1px solid $paragraph-color;
-        position: absolute;
-        top: 0;
-        left: 78%;
+        float: right;
         height: 100%;
+        padding: 13px 20px;
+        &:hover {
+            cursor: pointer;
+        }
     }
-    .notification img {
+    .notification svg {
         height: 20px;
         width: 20px;
+        fill: $paragraph-color;
+    }
+    .user {
+        border-left: 1px solid $paragraph-color;
+        float: right;
+        height: 100%;
+        color: $user-blue;
+        padding: 0 20px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .user svg {
+        height: 22px;
+        width: 22px;
+        fill: $paragraph-color;
+        margin-right: 15px;
+        margin-top: 5px;
+    }
+    .quit {
+        border-left: 1px solid $paragraph-color;
+        float: right;
+        height: 100%;
+        padding: 13px 20px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .quit svg {
+        height: 20px;
+        width: 20px;
+        fill: $paragraph-color;
     }
 }
+
+.general-statistics {}
