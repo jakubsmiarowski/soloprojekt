@@ -528,6 +528,30 @@ template {
   fill: #797979;
 }
 
+.general-statistics {
+  float: right;
+  width: calc(100% - 230px);
+  background-color: #FFFFFF;
+  margin: 15px;
+  margin-top: 63px;
+}
+
+.general-statistics h1 {
+  color: #797979;
+  font-size: 15px;
+  width: 100%;
+  border-bottom: 1px solid #BCBCBC;
+  padding: 0 0 10px 10px;
+  text-transform: uppercase;
+}
+
+.links {
+  float: right;
+  width: calc(100% - 230px);
+  background-color: #FFFFFF;
+  margin: 0 15px;
+}
+
 * {
   margin: 0;
   padding: 0;
