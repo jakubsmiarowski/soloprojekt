@@ -359,7 +359,7 @@ template {
 .side-navbar .logo-bar .logo {
   max-width: 150px;
   padding: 10px 0 10px 10px;
-  font-family: "Indie Flower", cursive;
+  font-family: "Indie Flower";
   font-size: 25px;
 }
 
@@ -415,6 +415,11 @@ template {
 
 .side-navbar .sections .section a {
   font-size: 15px;
+  text-decoration: none;
+}
+
+.side-navbar .sections .section a:active, .side-navbar .sections .section a:visited {
+  color: inherit;
 }
 
 .side-navbar .manager {
@@ -452,12 +457,12 @@ template {
   position: fixed;
   top: 0;
   left: 0;
-  border-bottom: 1px solid #797979;
+  border-bottom: 1px solid #BCBCBC;
 }
 
 .top-bar .wallet {
-  border-right: 1px solid #797979;
-  border-left: 1px solid #797979;
+  border-right: 1px solid #BCBCBC;
+  border-left: 1px solid #BCBCBC;
   color: #797979;
   float: right;
   padding: 10px 20px;
@@ -492,7 +497,7 @@ template {
 }
 
 .top-bar .user {
-  border-left: 1px solid #797979;
+  border-left: 1px solid #BCBCBC;
   float: right;
   height: 100%;
   color: #83A2B8;
@@ -512,7 +517,7 @@ template {
 }
 
 .top-bar .quit {
-  border-left: 1px solid #797979;
+  border-left: 1px solid #BCBCBC;
   float: right;
   height: 100%;
   padding: 13px 20px;
@@ -545,6 +550,12 @@ template {
   text-transform: uppercase;
 }
 
+.general-statistics .calendar-dates svg {
+  height: 20px;
+  width: 20px;
+  fill: #797979;
+}
+
 .links {
   float: right;
   width: calc(100% - 230px);
@@ -552,11 +563,77 @@ template {
   margin: 0 15px;
 }
 
+.links h1 {
+  color: #797979;
+  font-size: 15px;
+  width: 100%;
+  border-bottom: 1px solid #BCBCBC;
+  padding: 0 0 10px 10px;
+  text-transform: uppercase;
+}
+
+.links .add {
+  display: block;
+  margin: 15px auto;
+  background-color: #F58220;
+  border-radius: 5px;
+  width: 120px;
+  height: 45px;
+  color: #EDEDED;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.links ul {
+  display: block;
+  margin: 15px auto;
+}
+
+.links ul li {
+  margin: 0 300px;
+  text-decoration: none;
+  list-style: none;
+  border-top: 1px solid #BCBCBC;
+  padding: 10px 0;
+}
+
+.links ul li svg {
+  height: 20px;
+  width: 20px;
+  display: none;
+}
+
+.links ul li:hover {
+  background-color: #F1F3F3;
+}
+
+.links ul li:hover svg {
+  display: block;
+  float: right;
+}
+
+.links ul li:last-child {
+  border-bottom: 1px solid #BCBCBC;
+}
+
+.links ul p {
+  color: #797979;
+  font-size: 20px;
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.links ul a {
+  padding-left: 300px;
+  text-decoration: none;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
 }
 
 body {
