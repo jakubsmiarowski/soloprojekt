@@ -168,8 +168,10 @@
     float: right;
     width: calc(100% - 230px);
     background-color: $background-main-color;
-    margin: 15px;
-    margin-top: 63px;
+    margin: 63px 15px 0 15px;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
+    box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
     h1 {
         color: $paragraph-color;
         font-size: 15px;
@@ -178,10 +180,85 @@
         padding: 0 0 10px 10px;
         text-transform: uppercase;
     }
-    .calendar-dates svg {
-        height: 20px;
-        width: 20px;
-        fill: $paragraph-color;
+    .forms {
+        margin: 0;
+        width: 100%;
+        height: 7em;
+        border-bottom: 1px solid $border-color;
+        .refresh {
+            height: 35px;
+            width: 35px;
+            background-color: $orange;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            svg {
+                height: 20px;
+                width: 20px;
+                padding-top: 3px;
+                fill: $hover-color;
+            }
+        }
+    }
+    .row {
+        margin: 3% 40% 0 40%;
+        width: 20%;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        .calendar-date-left,
+        .calendar-date-right {
+            display: inline-block;
+            padding: 10px;
+            color: $paragraph-color;
+        }
+        .calendar-date-right svg {
+            height: 20px;
+            width: 20px;
+            padding-left: 5px;
+            padding-right: 0;
+            fill: $paragraph-color;
+        }
+    }
+    .data {
+        display: inline;
+        .data-1,
+        .data-2,
+        .data-3,
+        .data-4 {
+            display: inline-block;
+            border-bottom: 1px solid $border-color;
+            width: 25%;
+            p {
+                font-size: 15px;
+                color: #ABABAB;
+                display: inline-block;
+                font-weight: bold;
+            }
+            .number {
+                color: black;
+                font-weight: 300;
+                float: right;
+            }
+        }
+        .data-1,
+        .data-2 {
+            margin: 20px 5% 0 20%;
+        }
+        .data-3,
+        .data-4 {
+            margin: 20px 10% 0 5%;
+        }
+    }
+    h2 {
+        margin-top: 40px;
+        margin-left: 20%;
+        font-size: 15px;
+        color: #ABABAB;
+        font-weight: bold;
+    }
+    .graph {
+        display: block;
+        margin: 20px auto;
     }
 }
 
@@ -189,7 +266,10 @@
     float: right;
     width: calc(100% - 230px);
     background-color: $background-main-color;
-    margin: 0 15px;
+    margin: 15px;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
+    box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
     h1 {
         color: $paragraph-color;
         font-size: 15px;
@@ -200,7 +280,7 @@
     }
     .add {
         display: block;
-        margin: 15px auto;
+        margin: 20px auto;
         background-color: $orange;
         border-radius: 5px;
         width: 120px;
@@ -229,6 +309,13 @@
                 svg {
                     display: block;
                     float: right;
+                    margin: 0 15px;
+                }
+                .orange {
+                    fill: $orange;
+                }
+                .trash {
+                    fill: $paragraph-color;
                 }
             }
         }
@@ -239,11 +326,15 @@
             color: $paragraph-color;
             font-size: 20px;
             font-weight: bold;
-            padding-right: 5px;
+            padding-left: 15px;
+            display: inline-block;
         }
         a {
-            padding-left: 300px;
+            padding-top: 0;
+            display: inline-block;
             text-decoration: none;
+            color: $user-blue;
+            padding: 0 auto;
         }
     }
 }
