@@ -341,7 +341,11 @@ template {
   display: none;
 }
 
-.side-navbar {
+body {
+  padding-top: 63px;
+}
+
+body .side-navbar {
   height: 100vh;
   width: 200px;
   background-color: #191919;
@@ -351,28 +355,29 @@ template {
   z-index: 3;
 }
 
-.side-navbar .logo-bar {
+body .side-navbar .logo-bar {
   width: 100%;
   color: #EDEDED;
 }
 
-.side-navbar .logo-bar .logo {
+body .side-navbar .logo-bar .logo {
   max-width: 150px;
   padding: 10px 0 10px 10px;
   font-family: "Indie Flower";
   font-size: 25px;
+  cursor: pointer;
 }
 
-.side-navbar .logo-bar .burger {
+body .side-navbar .logo-bar .burger {
   cursor: pointer;
   position: absolute;
   top: 10px;
   right: 15px;
 }
 
-.side-navbar .logo-bar .burger .line1,
-.side-navbar .logo-bar .burger .line2,
-.side-navbar .logo-bar .burger .line3 {
+body .side-navbar .logo-bar .burger .line1,
+body .side-navbar .logo-bar .burger .line2,
+body .side-navbar .logo-bar .burger .line3 {
   width: 20px;
   height: 1px;
   background-color: #797979;
@@ -380,13 +385,13 @@ template {
   padding: 2px 5px 0 0;
 }
 
-.side-navbar .sections {
+body .side-navbar .sections {
   width: 100%;
   height: 300px;
   border-bottom: 1px solid #797979;
 }
 
-.side-navbar .sections .section {
+body .side-navbar .sections .section {
   text-decoration: none;
   background-color: inherit;
   color: #797979;
@@ -395,17 +400,17 @@ template {
   cursor: pointer;
 }
 
-.side-navbar .sections .section:hover {
+body .side-navbar .sections .section:hover {
   background-color: #282828;
   color: #EDEDED;
   border-left: 5px solid #F58220;
 }
 
-.side-navbar .sections .section:hover svg {
-  fill: #EDEDED;
+body .side-navbar .sections .section:hover svg {
+  fill: #F58220;
 }
 
-.side-navbar .sections .section svg {
+body .side-navbar .sections .section svg {
   height: 22px;
   width: 22px;
   float: left;
@@ -414,44 +419,45 @@ template {
   margin-left: 15px;
 }
 
-.side-navbar .sections .section a {
+body .side-navbar .sections .section a {
   font-size: 15px;
   text-decoration: none;
 }
 
-.side-navbar .sections .section a:active, .side-navbar .sections .section a:visited {
+body .side-navbar .sections .section a:active, body .side-navbar .sections .section a:visited {
   color: inherit;
 }
 
-.side-navbar .manager {
+body .side-navbar .manager {
   display: block;
   margin-top: 15px;
   width: 100%;
 }
 
-.side-navbar .manager h2 {
+body .side-navbar .manager h2 {
   margin: 0 0 5px 25px;
   text-transform: uppercase;
   color: #797979;
   font-size: 15px;
 }
 
-.side-navbar .manager img {
+body .side-navbar .manager img {
   height: 40px;
   width: 40px;
   border-radius: 50%;
   float: left;
   margin: 15px 15px 0 25px;
+  object-fit: cover;
 }
 
-.side-navbar .manager .manager-name {
+body .side-navbar .manager .manager-name {
   font-size: 15px;
   color: #83A2B8;
   float: right;
   margin: 25px 35px 0 10px;
 }
 
-.top-bar {
+body .top-bar {
   width: 100%;
   height: 48px;
   background-color: #FFFFFF;
@@ -461,7 +467,7 @@ template {
   border-bottom: 1px solid #BCBCBC;
 }
 
-.top-bar .wallet {
+body .top-bar .wallet {
   border-right: 1px solid #BCBCBC;
   border-left: 1px solid #BCBCBC;
   color: #797979;
@@ -470,34 +476,43 @@ template {
   height: 100%;
 }
 
-.top-bar .wallet:hover {
+body .top-bar .wallet span {
+  float: left;
+}
+
+body .top-bar .wallet:hover {
   cursor: pointer;
 }
 
-.top-bar .wallet svg {
+body .top-bar .wallet .wallet-svg {
+  padding-bottom: 5px;
+}
+
+body .top-bar .wallet svg {
+  float: left;
   height: 22px;
   width: 22px;
   padding: 0 5px;
   fill: #797979;
 }
 
-.top-bar .notification {
+body .top-bar .notification {
   float: right;
   height: 100%;
   padding: 13px 20px;
 }
 
-.top-bar .notification:hover {
+body .top-bar .notification:hover {
   cursor: pointer;
 }
 
-.top-bar .notification svg {
+body .top-bar .notification svg {
   height: 20px;
   width: 20px;
   fill: #797979;
 }
 
-.top-bar .user {
+body .top-bar .user {
   border-left: 1px solid #BCBCBC;
   float: right;
   height: 100%;
@@ -505,46 +520,52 @@ template {
   padding: 0 20px;
 }
 
-.top-bar .user:hover {
+body .top-bar .user span {
+  float: left;
+  padding-top: 10px;
+}
+
+body .top-bar .user:hover {
   cursor: pointer;
 }
 
-.top-bar .user svg {
+body .top-bar .user svg {
   height: 22px;
   width: 22px;
   fill: #797979;
   margin-right: 15px;
-  margin-top: 5px;
+  margin-top: 10px;
+  float: left;
 }
 
-.top-bar .quit {
+body .top-bar .quit {
   border-left: 1px solid #BCBCBC;
   float: right;
   height: 100%;
   padding: 13px 20px;
 }
 
-.top-bar .quit:hover {
+body .top-bar .quit:hover {
   cursor: pointer;
 }
 
-.top-bar .quit svg {
+body .top-bar .quit svg {
   height: 20px;
   width: 20px;
   fill: #797979;
 }
 
-.general-statistics {
+body .general-statistics {
   float: right;
   width: calc(100% - 230px);
   background-color: #FFFFFF;
-  margin: 63px 15px 0 15px;
+  margin: 0 15px 15px 15px;
   -webkit-box-shadow: 0px 0px 9px 0px #d6d2d6;
   -moz-box-shadow: 0px 0px 9px 0px #d6d2d6;
   box-shadow: 0px 0px 9px 0px #d6d2d6;
 }
 
-.general-statistics h1 {
+body .general-statistics h1 {
   color: #797979;
   font-size: 15px;
   width: 100%;
@@ -553,31 +574,69 @@ template {
   text-transform: uppercase;
 }
 
-.general-statistics .forms {
+body .general-statistics .forms {
   margin: 0;
   width: 100%;
   height: 7em;
   border-bottom: 1px solid #BCBCBC;
+  text-align: center;
 }
 
-.general-statistics .forms .row {
+body .general-statistics .forms input {
+  margin: 30px auto 10px auto;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid #BCBCBC;
+  color: #797979;
+  font-size: 15px;
+  text-align: center;
+}
+
+body .general-statistics .forms .submit {
+  padding: 13px;
+  background-color: #F58220;
+  color: #EDEDED;
+  border: none;
+  cursor: pointer;
+}
+
+body .general-statistics .forms .refresh {
+  line-height: 10px;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: #F58220;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body .general-statistics .forms .refresh svg {
+  height: 20px;
+  width: 20px;
+  padding-top: 3px;
+  fill: #EDEDED;
+}
+
+body .general-statistics .row {
   margin: 3% 40% 0 40%;
   width: 20%;
   border: 1px solid #BCBCBC;
   border-radius: 5px;
 }
 
-.general-statistics .forms .row .calendar-date-left,
-.general-statistics .forms .row .calendar-date-right {
+body .general-statistics .row .calendar-date-left,
+body .general-statistics .row .calendar-date-right {
   display: inline-block;
   color: #797979;
 }
 
-.general-statistics .forms .row .calendar-date-left {
+body .general-statistics .row .calendar-date-left {
   border-right: 1px solid #BCBCBC;
 }
 
-.general-statistics .forms .row .calendar-date-right svg {
+body .general-statistics .row .calendar-date-right svg {
   height: 20px;
   width: 20px;
   padding-left: 5px;
@@ -585,71 +644,61 @@ template {
   fill: #797979;
 }
 
-.general-statistics .forms .row .refresh {
-  height: 35px;
-  width: 35px;
-  background-color: #F58220;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+body .data-1 {
+  display: inline-block;
+  width: 25%;
+  margin: 30px 5% 30px 20%;
+  float: left;
 }
 
-.general-statistics .forms .row .refresh svg {
-  height: 20px;
-  width: 20px;
-  padding-top: 3px;
-  fill: #EDEDED;
-}
-
-.general-statistics .data-1 {
-  display: inline;
-}
-
-.general-statistics .data-1 .data-section-1 {
+body .data-1 .data-section-1 {
   display: inline-block;
   border-bottom: 1px solid #BCBCBC;
-  width: 25%;
-  margin: 20px 5% 0 20%;
+  width: 100%;
+  padding: 20px 0 5px 0;
 }
 
-.general-statistics .data-1 .data-section-1 p {
+body .data-1 .data-section-1 p {
   font-size: 15px;
   color: #ABABAB;
   display: inline-block;
   font-weight: bold;
 }
 
-.general-statistics .data-1 .data-section-1 .number {
+body .data-1 .data-section-1 .number {
   color: black;
   font-weight: 300;
   float: right;
 }
 
-.general-statistics .data-2 {
-  display: inline;
+body .data-2 {
+  display: inline-block;
+  width: 25%;
+  float: right;
+  margin: 30px 20% 30px 5%;
 }
 
-.general-statistics .data-2 .data-section-2 {
+body .data-2 .data-section-2 {
   display: inline-block;
   border-bottom: 1px solid #BCBCBC;
-  width: 25%;
-  margin: 20px 20% 0 5%;
+  width: 100%;
+  padding: 20px 0 5px 0;
 }
 
-.general-statistics .data-2 .data-section-2 p {
+body .data-2 .data-section-2 p {
   font-size: 15px;
   color: #ABABAB;
   display: inline-block;
   font-weight: bold;
 }
 
-.general-statistics .data-2 .data-section-2 .number {
+body .data-2 .data-section-2 .number {
   color: black;
   font-weight: 300;
   float: right;
 }
 
-.general-statistics h2 {
+body h2 {
   margin-top: 40px;
   margin-left: 20%;
   font-size: 15px;
@@ -657,7 +706,8 @@ template {
   font-weight: bold;
 }
 
-.general-statistics .graph {
+body .graph {
+  width: 70%;
   display: block;
   margin: 20px auto;
 }
@@ -666,7 +716,7 @@ template {
   float: right;
   width: calc(100% - 230px);
   background-color: #FFFFFF;
-  margin: 15px;
+  margin: 0 15px 15px 15px;
   -webkit-box-shadow: 0px 0px 9px 0px #d6d2d6;
   -moz-box-shadow: 0px 0px 9px 0px #d6d2d6;
   box-shadow: 0px 0px 9px 0px #d6d2d6;
@@ -738,6 +788,7 @@ template {
 }
 
 .links ul p {
+  min-width: 200px;
   color: #797979;
   font-size: 15px;
   font-weight: bold;

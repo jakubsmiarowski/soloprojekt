@@ -1,191 +1,240 @@
-.side-navbar {
-    height: 100vh;
-    width: 200px;
-    background-color: #191919;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    .logo-bar {
-        width: 100%;
-        color: $hover-color;
-        .logo {
-            max-width: 150px;
-            padding: 10px 0 10px 10px;
-            font-family: $logo-font;
-            font-size: 25px;
+body {
+    padding-top: 63px;
+    .side-navbar {
+        height: 100vh;
+        width: 200px;
+        background-color: #191919;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        .logo-bar {
+            width: 100%;
+            color: $hover-color;
+            .logo {
+                max-width: 150px;
+                padding: 10px 0 10px 10px;
+                font-family: $logo-font;
+                font-size: 25px;
+                cursor: pointer;
+            }
+            .burger {
+                cursor: pointer;
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                .line1,
+                .line2,
+                .line3 {
+                    width: 20px;
+                    height: 1px;
+                    background-color: $paragraph-color;
+                    margin: 5px;
+                    padding: 2px 5px 0 0;
+                }
+            }
         }
-        .burger {
-            cursor: pointer;
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            .line1,
-            .line2,
-            .line3 {
-                width: 20px;
-                height: 1px;
-                background-color: $paragraph-color;
-                margin: 5px;
-                padding: 2px 5px 0 0;
+        .sections {
+            width: 100%;
+            height: 300px;
+            border-bottom: 1px solid $paragraph-color;
+            .section {
+                text-decoration: none;
+                background-color: inherit;
+                color: $paragraph-color;
+                padding: 10px 0 10px 10px;
+                transition: 300ms;
+                cursor: pointer;
+                &:hover {
+                    background-color: #282828;
+                    color: $hover-color;
+                    border-left: 5px solid $orange;
+                    svg {
+                        fill: $orange;
+                    }
+                }
+            }
+            .section svg {
+                height: 22px;
+                width: 22px;
+                float: left;
+                fill: $paragraph-color;
+                padding-right: 10px;
+                margin-left: 15px;
+            }
+            .section a {
+                font-size: 15px;
+                text-decoration: none;
+                &:active,
+                &:visited {
+                    color: inherit;
+                }
+            }
+        }
+        .manager {
+            display: block;
+            margin-top: 15px;
+            width: 100%;
+            h2 {
+                margin: 0 0 5px 25px;
+                text-transform: uppercase;
+                color: $paragraph-color;
+                font-size: 15px;
+            }
+            img {
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                float: left;
+                margin: 15px 15px 0 25px;
+                object-fit: cover;
+            }
+            .manager-name {
+                font-size: 15px;
+                color: $user-blue;
+                float: right;
+                margin: 25px 35px 0 10px;
             }
         }
     }
-    .sections {
+    .top-bar {
         width: 100%;
-        height: 300px;
-        border-bottom: 1px solid $paragraph-color;
-        .section {
-            text-decoration: none;
-            background-color: inherit;
+        height: 48px;
+        background-color: $background-main-color;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid $border-color;
+        .wallet {
+            border-right: 1px solid $border-color;
+            border-left: 1px solid $border-color;
             color: $paragraph-color;
-            padding: 10px 0 10px 10px;
-            transition: 300ms;
-            cursor: pointer;
+            float: right;
+            padding: 10px 20px;
+            height: 100%;
+            span {
+                float: left;
+            }
             &:hover {
-                background-color: #282828;
+                cursor: pointer;
+            }
+            .wallet-svg {
+                padding-bottom: 5px;
+            }
+        }
+        .wallet svg {
+            float: left;
+            height: 22px;
+            width: 22px;
+            padding: 0 5px;
+            fill: $paragraph-color;
+        }
+        .notification {
+            float: right;
+            height: 100%;
+            padding: 13px 20px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .notification svg {
+            height: 20px;
+            width: 20px;
+            fill: $paragraph-color;
+        }
+        .user {
+            border-left: 1px solid $border-color;
+            float: right;
+            height: 100%;
+            color: $user-blue;
+            padding: 0 20px;
+            span {
+                float: left;
+                padding-top: 10px;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .user svg {
+            height: 22px;
+            width: 22px;
+            fill: $paragraph-color;
+            margin-right: 15px;
+            margin-top: 10px;
+            float: left;
+        }
+        .quit {
+            border-left: 1px solid $border-color;
+            float: right;
+            height: 100%;
+            padding: 13px 20px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .quit svg {
+            height: 20px;
+            width: 20px;
+            fill: $paragraph-color;
+        }
+    }
+    .general-statistics {
+        float: right;
+        width: calc(100% - 230px);
+        background-color: $background-main-color;
+        margin: 0 15px 15px 15px;
+        -webkit-box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
+        -moz-box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
+        box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
+        h1 {
+            color: $paragraph-color;
+            font-size: 15px;
+            width: 100%;
+            border-bottom: 1px solid $border-color;
+            padding: 0 0 10px 10px;
+            text-transform: uppercase;
+        }
+        .forms {
+            margin: 0;
+            width: 100%;
+            height: 7em;
+            border-bottom: 1px solid $border-color;
+            text-align: center;
+            input {
+                margin: 30px auto 10px auto;
+                padding: 10px;
+                display: inline-block;
+                border-radius: 3px;
+                border: 1px solid $border-color;
+                color: $paragraph-color;
+                font-size: 15px;
+                text-align: center;
+            }
+            .submit {
+                padding: 13px;
+                background-color: $orange;
                 color: $hover-color;
-                border-left: 5px solid $orange;
+                border: none;
+                cursor: pointer;
+            }
+            .refresh {
+                line-height: 10px;
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                background-color: $orange;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
                 svg {
+                    height: 20px;
+                    width: 20px;
+                    padding-top: 3px;
                     fill: $hover-color;
                 }
             }
         }
-        .section svg {
-            height: 22px;
-            width: 22px;
-            float: left;
-            fill: $paragraph-color;
-            padding-right: 10px;
-            margin-left: 15px;
-        }
-        .section a {
-            font-size: 15px;
-            text-decoration: none;
-            &:active,
-            &:visited {
-                color: inherit;
-            }
-        }
-    }
-    .manager {
-        display: block;
-        margin-top: 15px;
-        width: 100%;
-        h2 {
-            margin: 0 0 5px 25px;
-            text-transform: uppercase;
-            color: $paragraph-color;
-            font-size: 15px;
-        }
-        img {
-            height: 40px;
-            width: 40px;
-            border-radius: 50%;
-            float: left;
-            margin: 15px 15px 0 25px;
-        }
-        .manager-name {
-            font-size: 15px;
-            color: $user-blue;
-            float: right;
-            margin: 25px 35px 0 10px;
-        }
-    }
-}
-
-.top-bar {
-    width: 100%;
-    height: 48px;
-    background-color: $background-main-color;
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-bottom: 1px solid $border-color;
-    .wallet {
-        border-right: 1px solid $border-color;
-        border-left: 1px solid $border-color;
-        color: $paragraph-color;
-        float: right;
-        padding: 10px 20px;
-        height: 100%;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-    .wallet svg {
-        height: 22px;
-        width: 22px;
-        padding: 0 5px;
-        fill: $paragraph-color;
-    }
-    .notification {
-        float: right;
-        height: 100%;
-        padding: 13px 20px;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-    .notification svg {
-        height: 20px;
-        width: 20px;
-        fill: $paragraph-color;
-    }
-    .user {
-        border-left: 1px solid $border-color;
-        float: right;
-        height: 100%;
-        color: $user-blue;
-        padding: 0 20px;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-    .user svg {
-        height: 22px;
-        width: 22px;
-        fill: $paragraph-color;
-        margin-right: 15px;
-        margin-top: 5px;
-    }
-    .quit {
-        border-left: 1px solid $border-color;
-        float: right;
-        height: 100%;
-        padding: 13px 20px;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-    .quit svg {
-        height: 20px;
-        width: 20px;
-        fill: $paragraph-color;
-    }
-}
-
-.general-statistics {
-    float: right;
-    width: calc(100% - 230px);
-    background-color: $background-main-color;
-    margin: 63px 15px 0 15px;
-    -webkit-box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
-    -moz-box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
-    box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
-    h1 {
-        color: $paragraph-color;
-        font-size: 15px;
-        width: 100%;
-        border-bottom: 1px solid $border-color;
-        padding: 0 0 10px 10px;
-        text-transform: uppercase;
-    }
-    .forms {
-        margin: 0;
-        width: 100%;
-        height: 7em;
-        border-bottom: 1px solid $border-color;
         .row {
             margin: 3% 40% 0 40%;
             // padding: 10px;
@@ -209,29 +258,19 @@
                 fill: $paragraph-color;
                 //  float: right;
             }
-            .refresh {
-                height: 35px;
-                width: 35px;
-                background-color: $orange;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                svg {
-                    height: 20px;
-                    width: 20px;
-                    padding-top: 3px;
-                    fill: $hover-color;
-                }
-            }
         }
     }
     .data-1 {
-        display: inline;
+        display: inline-block;
+        width: 25%;
+        margin: 30px 5% 30px 20%;
+        float: left;
         .data-section-1 {
             display: inline-block;
             border-bottom: 1px solid $border-color;
-            width: 25%;
-            margin: 20px 5% 0 20%;
+            width: 100%;
+            padding: 20px 0 5px 0;
+            //   margin: 40px 5% 20px 20%;
             p {
                 font-size: 15px;
                 color: #ABABAB;
@@ -246,12 +285,16 @@
         }
     }
     .data-2 {
-        display: inline;
+        display: inline-block;
+        width: 25%;
+        float: right;
+        margin: 30px 20% 30px 5%;
         .data-section-2 {
             display: inline-block;
             border-bottom: 1px solid $border-color;
-            width: 25%;
-            margin: 20px 20% 0 5%;
+            width: 100%;
+            padding: 20px 0 5px 0;
+            //  margin: 40px 20% 20px 5%;
             // float: right;
             p {
                 font-size: 15px;
@@ -274,6 +317,7 @@
         font-weight: bold;
     }
     .graph {
+        width: 70%;
         display: block;
         margin: 20px auto;
     }
@@ -283,7 +327,7 @@
     float: right;
     width: calc(100% - 230px);
     background-color: $background-main-color;
-    margin: 15px;
+    margin: 0 15px 15px 15px;
     -webkit-box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
     -moz-box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
     box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
@@ -342,6 +386,7 @@
             border-bottom: 1px solid $border-color;
         }
         p {
+            min-width: 200px;
             color: $paragraph-color;
             font-size: 15px;
             font-weight: bold;
