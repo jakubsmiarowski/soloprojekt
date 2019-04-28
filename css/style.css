@@ -391,6 +391,7 @@ template {
   background-color: inherit;
   color: #797979;
   padding: 10px 0 10px 10px;
+  transition: 300ms;
   cursor: pointer;
 }
 
@@ -559,7 +560,32 @@ template {
   border-bottom: 1px solid #BCBCBC;
 }
 
-.general-statistics .forms .refresh {
+.general-statistics .forms .row {
+  margin: 3% 40% 0 40%;
+  width: 20%;
+  border: 1px solid #BCBCBC;
+  border-radius: 5px;
+}
+
+.general-statistics .forms .row .calendar-date-left,
+.general-statistics .forms .row .calendar-date-right {
+  display: inline-block;
+  color: #797979;
+}
+
+.general-statistics .forms .row .calendar-date-left {
+  border-right: 1px solid #BCBCBC;
+}
+
+.general-statistics .forms .row .calendar-date-right svg {
+  height: 20px;
+  width: 20px;
+  padding-left: 5px;
+  padding-right: 0;
+  fill: #797979;
+}
+
+.general-statistics .forms .row .refresh {
   height: 35px;
   width: 35px;
   background-color: #F58220;
@@ -568,75 +594,59 @@ template {
   cursor: pointer;
 }
 
-.general-statistics .forms .refresh svg {
+.general-statistics .forms .row .refresh svg {
   height: 20px;
   width: 20px;
   padding-top: 3px;
   fill: #EDEDED;
 }
 
-.general-statistics .row {
-  margin: 3% 40% 0 40%;
-  width: 20%;
-  border: 1px solid #BCBCBC;
-  border-radius: 5px;
-}
-
-.general-statistics .row .calendar-date-left,
-.general-statistics .row .calendar-date-right {
-  display: inline-block;
-  padding: 10px;
-  color: #797979;
-}
-
-.general-statistics .row .calendar-date-right svg {
-  height: 20px;
-  width: 20px;
-  padding-left: 5px;
-  padding-right: 0;
-  fill: #797979;
-}
-
-.general-statistics .data {
+.general-statistics .data-1 {
   display: inline;
 }
 
-.general-statistics .data .data-1,
-.general-statistics .data .data-2,
-.general-statistics .data .data-3,
-.general-statistics .data .data-4 {
+.general-statistics .data-1 .data-section-1 {
   display: inline-block;
   border-bottom: 1px solid #BCBCBC;
   width: 25%;
+  margin: 20px 5% 0 20%;
 }
 
-.general-statistics .data .data-1 p,
-.general-statistics .data .data-2 p,
-.general-statistics .data .data-3 p,
-.general-statistics .data .data-4 p {
+.general-statistics .data-1 .data-section-1 p {
   font-size: 15px;
   color: #ABABAB;
   display: inline-block;
   font-weight: bold;
 }
 
-.general-statistics .data .data-1 .number,
-.general-statistics .data .data-2 .number,
-.general-statistics .data .data-3 .number,
-.general-statistics .data .data-4 .number {
+.general-statistics .data-1 .data-section-1 .number {
   color: black;
   font-weight: 300;
   float: right;
 }
 
-.general-statistics .data .data-1,
-.general-statistics .data .data-2 {
-  margin: 20px 5% 0 20%;
+.general-statistics .data-2 {
+  display: inline;
 }
 
-.general-statistics .data .data-3,
-.general-statistics .data .data-4 {
-  margin: 20px 10% 0 5%;
+.general-statistics .data-2 .data-section-2 {
+  display: inline-block;
+  border-bottom: 1px solid #BCBCBC;
+  width: 25%;
+  margin: 20px 20% 0 5%;
+}
+
+.general-statistics .data-2 .data-section-2 p {
+  font-size: 15px;
+  color: #ABABAB;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.general-statistics .data-2 .data-section-2 .number {
+  color: black;
+  font-weight: 300;
+  float: right;
 }
 
 .general-statistics h2 {
@@ -715,10 +725,12 @@ template {
 
 .links ul li:hover .orange {
   fill: #F58220;
+  cursor: pointer;
 }
 
 .links ul li:hover .trash {
   fill: #797979;
+  cursor: pointer;
 }
 
 .links ul li:last-child {
@@ -727,7 +739,7 @@ template {
 
 .links ul p {
   color: #797979;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   padding-left: 15px;
   display: inline-block;
@@ -738,7 +750,7 @@ template {
   display: inline-block;
   text-decoration: none;
   color: #83A2B8;
-  padding: 0 auto;
+  margin: 0 40px 0 100px;
 }
 
 * {

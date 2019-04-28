@@ -40,6 +40,7 @@
             background-color: inherit;
             color: $paragraph-color;
             padding: 10px 0 10px 10px;
+            transition: 300ms;
             cursor: pointer;
             &:hover {
                 background-color: #282828;
@@ -185,49 +186,52 @@
         width: 100%;
         height: 7em;
         border-bottom: 1px solid $border-color;
-        .refresh {
-            height: 35px;
-            width: 35px;
-            background-color: $orange;
-            border: none;
+        .row {
+            margin: 3% 40% 0 40%;
+            // padding: 10px;
+            width: 20%;
+            border: 1px solid $border-color;
             border-radius: 5px;
-            cursor: pointer;
-            svg {
+            .calendar-date-left,
+            .calendar-date-right {
+                display: inline-block;
+                //   padding: 20px;
+                color: $paragraph-color;
+            }
+            .calendar-date-left {
+                border-right: 1px solid $border-color;
+            }
+            .calendar-date-right svg {
                 height: 20px;
                 width: 20px;
-                padding-top: 3px;
-                fill: $hover-color;
+                padding-left: 5px;
+                padding-right: 0;
+                fill: $paragraph-color;
+                //  float: right;
+            }
+            .refresh {
+                height: 35px;
+                width: 35px;
+                background-color: $orange;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                svg {
+                    height: 20px;
+                    width: 20px;
+                    padding-top: 3px;
+                    fill: $hover-color;
+                }
             }
         }
     }
-    .row {
-        margin: 3% 40% 0 40%;
-        width: 20%;
-        border: 1px solid $border-color;
-        border-radius: 5px;
-        .calendar-date-left,
-        .calendar-date-right {
-            display: inline-block;
-            padding: 10px;
-            color: $paragraph-color;
-        }
-        .calendar-date-right svg {
-            height: 20px;
-            width: 20px;
-            padding-left: 5px;
-            padding-right: 0;
-            fill: $paragraph-color;
-        }
-    }
-    .data {
+    .data-1 {
         display: inline;
-        .data-1,
-        .data-2,
-        .data-3,
-        .data-4 {
+        .data-section-1 {
             display: inline-block;
             border-bottom: 1px solid $border-color;
             width: 25%;
+            margin: 20px 5% 0 20%;
             p {
                 font-size: 15px;
                 color: #ABABAB;
@@ -240,13 +244,26 @@
                 float: right;
             }
         }
-        .data-1,
-        .data-2 {
-            margin: 20px 5% 0 20%;
-        }
-        .data-3,
-        .data-4 {
-            margin: 20px 10% 0 5%;
+    }
+    .data-2 {
+        display: inline;
+        .data-section-2 {
+            display: inline-block;
+            border-bottom: 1px solid $border-color;
+            width: 25%;
+            margin: 20px 20% 0 5%;
+            // float: right;
+            p {
+                font-size: 15px;
+                color: #ABABAB;
+                display: inline-block;
+                font-weight: bold;
+            }
+            .number {
+                color: black;
+                font-weight: 300;
+                float: right;
+            }
         }
     }
     h2 {
@@ -313,9 +330,11 @@
                 }
                 .orange {
                     fill: $orange;
+                    cursor: pointer;
                 }
                 .trash {
                     fill: $paragraph-color;
+                    cursor: pointer;
                 }
             }
         }
@@ -324,7 +343,7 @@
         }
         p {
             color: $paragraph-color;
-            font-size: 20px;
+            font-size: 15px;
             font-weight: bold;
             padding-left: 15px;
             display: inline-block;
@@ -334,7 +353,7 @@
             display: inline-block;
             text-decoration: none;
             color: $user-blue;
-            padding: 0 auto;
+            margin: 0 40px 0 100px;
         }
     }
 }
