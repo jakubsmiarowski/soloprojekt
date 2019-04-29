@@ -52,6 +52,9 @@ body {
                     svg {
                         fill: $orange;
                     }
+                    a {
+                        color: $hover-color;
+                    }
                 }
             }
             .section svg {
@@ -65,9 +68,12 @@ body {
             .section a {
                 font-size: 15px;
                 text-decoration: none;
+                color: $paragraph-color;
+                &:hover,
                 &:active,
-                &:visited {
-                    color: inherit;
+                &:visited,
+                &:focus {
+                    text-decoration: none;
                 }
             }
         }
@@ -150,7 +156,7 @@ body {
             padding: 0 20px;
             span {
                 float: left;
-                padding-top: 10px;
+                padding-top: 12px;
             }
             &:hover {
                 cursor: pointer;
@@ -400,5 +406,63 @@ body {
             color: $user-blue;
             margin: 0 40px 0 100px;
         }
+    }
+}
+
+.pdata {
+    float: right;
+    width: calc(100% - 230px);
+    background-color: $background-main-color;
+    margin: 0 15px 15px 15px;
+    // padding-bottom: 30px;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
+    box-shadow: 0px 0px 9px 0px rgba(214, 210, 214, 1);
+    h1 {
+        color: $paragraph-color;
+        font-size: 15px;
+        width: 100%;
+        border-bottom: 1px solid $border-color;
+        padding: 0 0 10px 10px;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+    .pdata-form {
+        display: block;
+        width: 40%;
+        margin: 10px 30%;
+        height: 30px;
+        p {
+            max-width: 1200px;
+            margin-top: 6px;
+            color: $paragraph-color;
+            font-size: 15px;
+            font-weight: bold;
+            padding-left: 15px;
+            display: inline-block;
+            float: left;
+        }
+        input {
+            width: 50%;
+            display: inline-block;
+            color: $user-blue;
+            margin: 3px 40px 0 50px;
+            padding: 5px 0;
+            float: right;
+            border-radius: 5px;
+            border: 1px solid $orange;
+        }
+    }
+    button {
+        display: block;
+        margin: 50px auto;
+        background-color: $orange;
+        border-radius: 5px;
+        width: 120px;
+        height: 45px;
+        color: $hover-color;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
     }
 }
