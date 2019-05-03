@@ -353,6 +353,7 @@ body .side-navbar {
   top: 0;
   left: 0;
   z-index: 3;
+  transition: 300ms;
 }
 
 body .side-navbar .logo-bar {
@@ -890,88 +891,121 @@ body .graph {
     }
 }*/
 @media (max-width: 1400px) and (min-width: 1201px) {
-  .links ul p {
+  body .links ul p {
     min-width: 70px;
   }
-  .links ul a {
+  body .links ul a {
     float: right;
     margin: 0;
   }
-  .links ul a:hover svg {
+  body .links ul a:hover svg {
     display: none;
   }
 }
 
 @media (max-width: 1200px) and (min-width: 992px) {
-  .links ul p {
+  body .links ul p {
     min-width: 0;
     font-size: 10px;
   }
-  .links ul a {
+  body .links ul a {
     float: right;
     margin: 0 auto;
     font-size: 10px;
     padding-top: 5px;
   }
-  .links ul a:hover svg {
+  body .links ul a:hover svg {
     display: none;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .links ul li {
+  body .links ul li {
     max-width: 100%;
     margin: 0 50px;
   }
-  .links ul li a {
+  body .links ul li a {
     float: right;
     margin: 0 15px 0 0;
   }
-  .links ul li a:hover svg {
+  body .links ul li a:hover svg {
     display: none;
   }
-  .pdata .pdata-form input {
+  body .pdata .pdata-form input {
     margin: 3px 40px 0 25px;
   }
 }
 
 @media (max-width: 767px) {
-  .general-statistics .forms input {
+  body .side-navbar {
+    margin-left: -140px;
+  }
+  body .side-navbar .active {
+    margin-left: 0;
+  }
+  body .side-navbar .sections .section {
+    opacity: 0;
+  }
+  body .side-navbar .sections .active .section {
+    opacity: 1;
+  }
+  body .side-navbar .manager h2 {
+    opacity: 0;
+  }
+  body .side-navbar .manager .manager-name {
+    opacity: 0;
+  }
+  body .side-navbar .manager .active h2 {
+    opacity: 0;
+  }
+  body .side-navbar .manager .active .manager-name {
+    opacity: 0;
+  }
+  body .general-statistics {
+    width: calc(100% - 85px);
+  }
+  body .general-statistics .forms input {
     padding: 0;
     margin: 40px auto 10px auto;
   }
-  .general-statistics .forms .submit {
-    padding: 4px;
+  body .general-statistics .forms .submit {
+    padding: 3.5px;
   }
-  .general-statistics .data-1,
-  .general-statistics .data-2 {
+  body .general-statistics .data-1,
+  body .general-statistics .data-2 {
     display: block;
     margin: 30px auto 15px auto;
     width: 50%;
     float: none;
   }
-  .links .add {
+  body .links {
+    width: calc(100% - 85px);
+  }
+  body .links .add {
     width: 60px;
     height: 25px;
     font-size: 10px;
   }
-  .links ul li {
+  body .links ul li {
     max-width: 100%;
     margin: 0 50px;
   }
-  .links ul li p {
+  body .links ul li p {
     font-size: 10px;
   }
-  .links ul li a {
+  body .links ul li a {
     float: right;
     margin: 0 15px 0 0;
     font-size: 10px;
     padding-top: 5px;
   }
-  .links ul li a:hover svg {
+  body .links ul li a:hover svg {
     display: none;
   }
-  .pdata .pdata-form input {
+  body .pdata {
+    width: calc(100% - 85px);
+  }
+  body .pdata .pdata-form input {
     margin: 3px 40px 0 25px;
   }
 }
