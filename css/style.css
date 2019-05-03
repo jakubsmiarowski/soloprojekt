@@ -831,8 +831,8 @@ body .graph {
 
 .pdata .pdata-form {
   display: block;
-  width: 40%;
-  margin: 10px 30%;
+  width: 70%;
+  margin: 10px 15%;
   height: 30px;
 }
 
@@ -852,10 +852,19 @@ body .graph {
   display: inline-block;
   color: #83A2B8;
   margin: 3px 40px 0 50px;
-  padding: 5px 0;
+  padding: 5px 0 0 5px;
+  text-align: center;
   float: right;
   border-radius: 5px;
   border: 1px solid #F58220;
+}
+
+.pdata .pdata-form input::-webkit-input-placeholder,
+.pdata .pdata-form input :-moz-placeholder,
+.pdata .pdata-form input :-ms-input-placeholder,
+.pdata .pdata-form input ::placeholder {
+  font-size: 13px;
+  line-height: 5px;
 }
 
 .pdata button {
@@ -871,9 +880,99 @@ body .graph {
   cursor: pointer;
 }
 
-@media (max-width: 1200px) {
+/*@media (min-width: 1400px) {
+    .links {
+        ul {
+            p {
+                min-width: 300px;
+            }
+        }
+    }
+}*/
+@media (max-width: 1400px) and (min-width: 1201px) {
   .links ul p {
-    min-width: 400px;
+    min-width: 70px;
+  }
+  .links ul a {
+    float: right;
+    margin: 0;
+  }
+  .links ul a:hover svg {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+  .links ul p {
+    min-width: 0;
+    font-size: 10px;
+  }
+  .links ul a {
+    float: right;
+    margin: 0 auto;
+    font-size: 10px;
+    padding-top: 5px;
+  }
+  .links ul a:hover svg {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .links ul li {
+    max-width: 100%;
+    margin: 0 50px;
+  }
+  .links ul li a {
+    float: right;
+    margin: 0 15px 0 0;
+  }
+  .links ul li a:hover svg {
+    display: none;
+  }
+  .pdata .pdata-form input {
+    margin: 3px 40px 0 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .general-statistics .forms input {
+    padding: 0;
+    margin: 40px auto 10px auto;
+  }
+  .general-statistics .forms .submit {
+    padding: 4px;
+  }
+  .general-statistics .data-1,
+  .general-statistics .data-2 {
+    display: block;
+    margin: 30px auto 15px auto;
+    width: 50%;
+    float: none;
+  }
+  .links .add {
+    width: 60px;
+    height: 25px;
+    font-size: 10px;
+  }
+  .links ul li {
+    max-width: 100%;
+    margin: 0 50px;
+  }
+  .links ul li p {
+    font-size: 10px;
+  }
+  .links ul li a {
+    float: right;
+    margin: 0 15px 0 0;
+    font-size: 10px;
+    padding-top: 5px;
+  }
+  .links ul li a:hover svg {
+    display: none;
+  }
+  .pdata .pdata-form input {
+    margin: 3px 40px 0 25px;
   }
 }
 

@@ -429,8 +429,8 @@ body {
     }
     .pdata-form {
         display: block;
-        width: 40%;
-        margin: 10px 30%;
+        width: 70%;
+        margin: 10px 15%;
         height: 30px;
         p {
             max-width: 1200px;
@@ -447,10 +447,18 @@ body {
             display: inline-block;
             color: $user-blue;
             margin: 3px 40px 0 50px;
-            padding: 5px 0;
+            padding: 5px 0 0 5px;
+            text-align: center;
             float: right;
             border-radius: 5px;
             border: 1px solid $orange;
+            &::-webkit-input-placeholder,
+             :-moz-placeholder,
+             :-ms-input-placeholder,
+             ::placeholder {
+                font-size: 13px;
+                line-height: 5px;
+            }
         }
     }
     button {
