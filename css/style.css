@@ -484,6 +484,11 @@ body .top-bar .wallet {
 
 body .top-bar .wallet span {
   float: left;
+  transition: 200ms;
+}
+
+body .top-bar .wallet span:hover {
+  color: #F58220;
 }
 
 body .top-bar .wallet:hover {
@@ -500,6 +505,11 @@ body .top-bar .wallet svg {
   width: 22px;
   padding: 0 5px;
   fill: #797979;
+  transition: 200ms;
+}
+
+body .top-bar .wallet svg:hover {
+  fill: #F58220;
 }
 
 body .top-bar .notification {
@@ -516,6 +526,11 @@ body .top-bar .notification svg {
   height: 20px;
   width: 20px;
   fill: #797979;
+  transition: 200ms;
+}
+
+body .top-bar .notification svg:hover {
+  fill: #F58220;
 }
 
 body .top-bar .user {
@@ -542,6 +557,11 @@ body .top-bar .user svg {
   margin-right: 15px;
   margin-top: 10px;
   float: left;
+  transition: 200ms;
+}
+
+body .top-bar .user svg:hover {
+  fill: #F58220;
 }
 
 body .top-bar .quit {
@@ -559,6 +579,11 @@ body .top-bar .quit svg {
   height: 20px;
   width: 20px;
   fill: #797979;
+  transition: 200ms;
+}
+
+body .top-bar .quit svg:hover {
+  fill: #F58220;
 }
 
 body .general-statistics {
@@ -605,6 +630,13 @@ body .general-statistics .forms .submit {
   color: #EDEDED;
   border: none;
   cursor: pointer;
+  transition: 200ms;
+}
+
+body .general-statistics .forms .submit:hover {
+  background-color: transparent;
+  border: 1px solid #F58220;
+  color: #F58220;
 }
 
 body .general-statistics .forms .refresh {
@@ -748,6 +780,13 @@ body .graph {
   font-size: 20px;
   border: none;
   cursor: pointer;
+  transition: 200ms;
+}
+
+.links .add:hover {
+  background-color: transparent;
+  border: 1px solid #F58220;
+  color: #F58220;
 }
 
 .links ul {
@@ -868,7 +907,7 @@ body .graph {
   line-height: 5px;
 }
 
-.pdata button {
+.pdata .submit {
   display: block;
   margin: 50px auto;
   background-color: #F58220;
@@ -879,6 +918,13 @@ body .graph {
   font-size: 20px;
   border: none;
   cursor: pointer;
+  transition: 200ms;
+}
+
+.pdata .submit:hover {
+  background-color: transparent;
+  border: 1px solid #F58220;
+  color: #F58220;
 }
 
 /*@media (min-width: 1400px) {
@@ -891,6 +937,9 @@ body .graph {
     }
 }*/
 @media (max-width: 1400px) and (min-width: 1201px) {
+  body .general-statistics .earnings .graph {
+    width: 600px;
+  }
   body .links ul p {
     min-width: 70px;
   }
@@ -939,15 +988,13 @@ body .graph {
 @media (max-width: 767px) and (min-width: 501px) {
   body .side-navbar {
     margin-left: -140px;
+    transition: 300ms;
   }
-  body .side-navbar .active {
-    margin-left: 0;
+  body .side-navbar .sections {
+    border-bottom: 0;
   }
   body .side-navbar .sections .section {
     opacity: 0;
-  }
-  body .side-navbar .sections .active .section {
-    opacity: 1;
   }
   body .side-navbar .manager h2 {
     opacity: 0;
@@ -955,11 +1002,20 @@ body .graph {
   body .side-navbar .manager .manager-name {
     opacity: 0;
   }
-  body .side-navbar .manager .active h2 {
-    opacity: 0;
+  body .side-navbar.active {
+    margin-left: 0;
   }
-  body .side-navbar .manager .active .manager-name {
-    opacity: 0;
+  body .side-navbar.active .sections {
+    border-bottom: 1px solid #797979;
+  }
+  body .side-navbar.active .sections .section {
+    opacity: 1;
+  }
+  body .side-navbar.active .manager h2 {
+    opacity: 1;
+  }
+  body .side-navbar.active .manager .manager-name {
+    opacity: 1;
   }
   body .general-statistics {
     width: calc(100% - 85px);
@@ -985,10 +1041,19 @@ body .graph {
     width: 60px;
     height: 25px;
     font-size: 10px;
+    transition: 200ms;
+  }
+  body .links .add:hover {
+    background-color: transparent;
+    border: 1px solid #F58220;
+    color: #F58220;
   }
   body .links ul li {
     max-width: 100%;
     margin: 0 50px;
+  }
+  body .links ul li:hover svg {
+    display: none;
   }
   body .links ul li p {
     font-size: 10px;
@@ -1010,18 +1075,16 @@ body .graph {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px) and (min-width: 390px) {
   body .side-navbar {
     margin-left: -140px;
+    transition: 300ms;
   }
-  body .side-navbar .active {
-    margin-left: 0;
+  body .side-navbar .sections {
+    border-bottom: 0;
   }
   body .side-navbar .sections .section {
     opacity: 0;
-  }
-  body .side-navbar .sections .active .section {
-    opacity: 1;
   }
   body .side-navbar .manager h2 {
     opacity: 0;
@@ -1029,11 +1092,20 @@ body .graph {
   body .side-navbar .manager .manager-name {
     opacity: 0;
   }
-  body .side-navbar .manager .active h2 {
-    opacity: 0;
+  body .side-navbar.active {
+    margin-left: 0;
   }
-  body .side-navbar .manager .active .manager-name {
-    opacity: 0;
+  body .side-navbar.active .sections {
+    border-bottom: 1px solid #797979;
+  }
+  body .side-navbar.active .sections .section {
+    opacity: 1;
+  }
+  body .side-navbar.active .manager h2 {
+    opacity: 1;
+  }
+  body .side-navbar.active .manager .manager-name {
+    opacity: 1;
   }
   body .top-bar .wallet span {
     display: none;
@@ -1070,9 +1142,21 @@ body .graph {
     height: 25px;
     font-size: 10px;
   }
+  body .links .add {
+    width: 90%;
+    transition: 200ms;
+  }
+  body .links .add:hover {
+    background-color: transparent;
+    border: 1px solid #F58220;
+    color: #F58220;
+  }
   body .links ul li {
     max-width: 100%;
     margin: 0 50px;
+  }
+  body .links ul li:hover svg {
+    display: none;
   }
   body .links ul li p {
     font-size: 10px;
@@ -1095,6 +1179,123 @@ body .graph {
   }
   body .pdata .pdata-form input {
     margin: 3px 40px 0 0;
+  }
+}
+
+@media (max-width: 390px) {
+  body .side-navbar {
+    margin-left: -140px;
+    transition: 300ms;
+  }
+  body .side-navbar .sections {
+    border-bottom: 0;
+  }
+  body .side-navbar .sections .section {
+    opacity: 0;
+  }
+  body .side-navbar .manager h2 {
+    opacity: 0;
+  }
+  body .side-navbar .manager .manager-name {
+    opacity: 0;
+  }
+  body .side-navbar.active {
+    margin-left: 0;
+  }
+  body .side-navbar.active .sections {
+    border-bottom: 1px solid #797979;
+  }
+  body .side-navbar.active .sections .section {
+    opacity: 1;
+  }
+  body .side-navbar.active .manager h2 {
+    opacity: 1;
+  }
+  body .side-navbar.active .manager .manager-name {
+    opacity: 1;
+  }
+  body .top-bar .wallet span {
+    display: none;
+  }
+  body .top-bar .user span {
+    display: none;
+  }
+  body .top-bar .user svg {
+    margin-right: 0;
+  }
+  body .general-statistics {
+    width: calc(100% - 85px);
+  }
+  body .general-statistics .forms {
+    height: 9em;
+  }
+  body .general-statistics .forms input {
+    padding: 0;
+    display: block;
+    width: 90%;
+  }
+  body .general-statistics .forms .submit {
+    padding: 3.5px;
+    display: block;
+    width: 90%;
+  }
+  body .general-statistics .data-1,
+  body .general-statistics .data-2 {
+    display: block;
+    margin: 30px auto 15px auto;
+    width: 50%;
+    float: none;
+  }
+  body .links {
+    width: calc(100% - 85px);
+  }
+  body .links .add {
+    height: 25px;
+    font-size: 10px;
+    width: 67%;
+    transition: 200ms;
+  }
+  body .links .add:hover {
+    background-color: transparent;
+    border: 1px solid #F58220;
+    color: #F58220;
+  }
+  body ul li {
+    max-width: 100%;
+    margin: 0 50px;
+  }
+  body ul li:hover svg {
+    display: none;
+  }
+  body ul li p {
+    font-size: 10px;
+    min-width: 60px;
+    padding: 0;
+  }
+  body ul li a {
+    float: right;
+    margin: 0;
+    font-size: 8px;
+    padding-top: 5px;
+  }
+  body ul li a:hover svg {
+    display: none;
+  }
+  .pdata {
+    width: calc(100% - 85px);
+  }
+  .pdata .pdata-form {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .pdata .pdata-form p {
+    font-size: 11px;
+  }
+  .pdata .pdata-form input {
+    margin: 3px 40px 0 0;
+  }
+  .pdata .submit {
+    width: 90%;
   }
 }
 

@@ -10,6 +10,13 @@
 
 @media (max-width: 1400px) and (min-width: 1201px) {
     body {
+        .general-statistics {
+            .earnings {
+                .graph {
+                    width: 600px;
+                }
+            }
+        }
         .links {
             ul {
                 p {
@@ -86,19 +93,27 @@
     body {
         .side-navbar {
             margin-left: -140px;
-            .active {
-                margin-left: 0;
-            }
-            .sections {
-                .section {
-                    opacity: 0;
+            transition: 300ms;
+            .logo-bar {
+                .burger {
+                    transition: 300ms;
+                    &.toggle {
+                        .line1 {
+                            transform: rotate(-45deg) translate(-5px, 6px);
+                        }
+                        .line2 {
+                            opacity: 0;
+                        }
+                        .line3 {
+                            transform: rotate(45deg) translate(-5px, -6px);
+                        }
+                    }
                 }
             }
             .sections {
-                .active {
-                    .section {
-                        opacity: 1;
-                    }
+                border-bottom: 0;
+                .section {
+                    opacity: 0;
                 }
             }
             .manager {
@@ -109,15 +124,20 @@
                     opacity: 0;
                 }
             }
-            .manager {
-                .active {
-                    h2 {
-                        opacity: 0;
+            &.active {
+                margin-left: 0;
+                .sections {
+                    border-bottom: 1px solid $paragraph-color;
+                    .section {
+                        opacity: 1;
                     }
                 }
-                .active {
+                .manager {
+                    h2 {
+                        opacity: 1;
+                    }
                     .manager-name {
-                        opacity: 0;
+                        opacity: 1;
                     }
                 }
             }
@@ -144,14 +164,25 @@
         .links {
             width: calc(100% - 85px);
             .add {
-                width: 60px;
+                width: 70%;
                 height: 25px;
                 font-size: 10px;
+                transition: 200ms;
+                &:hover {
+                    background-color: transparent;
+                    border: 1px solid $orange;
+                    color: $orange;
+                }
             }
             ul {
                 li {
                     max-width: 100%;
                     margin: 0 50px;
+                    &:hover {
+                        svg {
+                            display: none;
+                        }
+                    }
                     p {
                         font-size: 10px;
                     }
@@ -180,23 +211,15 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px) and (min-width:390px) {
     body {
         .side-navbar {
             margin-left: -140px;
-            .active {
-                margin-left: 0;
-            }
+            transition: 300ms;
             .sections {
+                border-bottom: 0;
                 .section {
                     opacity: 0;
-                }
-            }
-            .sections {
-                .active {
-                    .section {
-                        opacity: 1;
-                    }
                 }
             }
             .manager {
@@ -207,15 +230,20 @@
                     opacity: 0;
                 }
             }
-            .manager {
-                .active {
-                    h2 {
-                        opacity: 0;
+            &.active {
+                margin-left: 0;
+                .sections {
+                    border-bottom: 1px solid $paragraph-color;
+                    .section {
+                        opacity: 1;
                     }
                 }
-                .active {
+                .manager {
+                    h2 {
+                        opacity: 1;
+                    }
                     .manager-name {
-                        opacity: 0;
+                        opacity: 1;
                     }
                 }
             }
@@ -262,10 +290,24 @@
                 height: 25px;
                 font-size: 10px;
             }
+            .add {
+                width: 74%;
+                transition: 200ms;
+                &:hover {
+                    background-color: transparent;
+                    border: 1px solid $orange;
+                    color: $orange;
+                }
+            }
             ul {
                 li {
                     max-width: 100%;
                     margin: 0 50px;
+                    &:hover {
+                        svg {
+                            display: none;
+                        }
+                    }
                     p {
                         font-size: 10px;
                         min-width: 60px;
@@ -294,6 +336,141 @@
                     margin: 3px 40px 0 0;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    body {
+        .side-navbar {
+            margin-left: -140px;
+            transition: 300ms;
+            .sections {
+                border-bottom: 0;
+                .section {
+                    opacity: 0;
+                }
+            }
+            .manager {
+                h2 {
+                    opacity: 0;
+                }
+                .manager-name {
+                    opacity: 0;
+                }
+            }
+            &.active {
+                margin-left: 0;
+                .sections {
+                    border-bottom: 1px solid $paragraph-color;
+                    .section {
+                        opacity: 1;
+                    }
+                }
+                .manager {
+                    h2 {
+                        opacity: 1;
+                    }
+                    .manager-name {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .top-bar {
+            .wallet {
+                span {
+                    display: none;
+                }
+            }
+            .user {
+                span {
+                    display: none;
+                }
+                svg {
+                    margin-right: 0;
+                }
+            }
+        }
+        .general-statistics {
+            width: calc(100% - 85px);
+            .forms {
+                height: 9em;
+                input {
+                    padding: 0;
+                    display: block;
+                    width: 90%;
+                }
+                .submit {
+                    padding: 3.5px;
+                    display: block;
+                    width: 90%;
+                }
+            }
+            .data-1,
+            .data-2 {
+                display: block;
+                margin: 30px auto 15px auto;
+                width: 50%;
+                float: none;
+            }
+        }
+        .links {
+            width: calc(100% - 85px);
+            .add {
+                height: 25px;
+                font-size: 10px;
+                width: 67%;
+                transition: 200ms;
+                &:hover {
+                    background-color: transparent;
+                    border: 1px solid $orange;
+                    color: $orange;
+                }
+            }
+            ul {
+                li {
+                    max-width: 100%;
+                    margin: 0 50px;
+                    &:hover {
+                        svg {
+                            display: none;
+                        }
+                    }
+                    p {
+                        font-size: 10px;
+                        min-width: 60px;
+                        padding: 0;
+                    }
+                    a {
+                        float: right;
+                        margin: 0;
+                        font-size: 8px;
+                        padding-top: 5px;
+                        &:hover {
+                            svg {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .pdata {
+        width: calc(100% - 85px);
+        .pdata-form {
+            width: 100%;
+            margin: 10px 0;
+            p {
+                font-size: 11px;
+            }
+            input {
+                margin: 3px 40px 0 0;
+            }
+        }
+        .submit {
+            width: 90%;
         }
     }
 }
