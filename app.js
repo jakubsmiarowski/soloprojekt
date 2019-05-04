@@ -4,5 +4,5 @@ function toggleMenu(visible) {
 
 document.querySelector('.burger').addEventListener('click', function(event) {
     event.preventDefault();
-    toggleMenu()
+    toggleMenu();
 });
