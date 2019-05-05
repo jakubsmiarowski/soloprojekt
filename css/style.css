@@ -990,6 +990,18 @@ body .graph {
     margin-left: -140px;
     transition: 300ms;
   }
+  body .side-navbar .logo-bar .burger {
+    transition: 300ms;
+  }
+  body .side-navbar .logo-bar .burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  body .side-navbar .logo-bar .burger.toggle .line2 {
+    opacity: 0;
+  }
+  body .side-navbar .logo-bar .burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
   body .side-navbar .sections {
     border-bottom: 0;
   }
@@ -1038,7 +1050,7 @@ body .graph {
     width: calc(100% - 85px);
   }
   body .links .add {
-    width: 60px;
+    width: 70%;
     height: 25px;
     font-size: 10px;
     transition: 200ms;
@@ -1057,6 +1069,7 @@ body .graph {
   }
   body .links ul li p {
     font-size: 10px;
+    min-width: 100px;
   }
   body .links ul li a {
     float: right;
@@ -1069,6 +1082,10 @@ body .graph {
   }
   body .pdata {
     width: calc(100% - 85px);
+  }
+  body .pdata .pdata-form {
+    width: 100%;
+    margin: 10px 0;
   }
   body .pdata .pdata-form input {
     margin: 3px 40px 0 25px;
@@ -1138,12 +1155,12 @@ body .graph {
     width: calc(100% - 85px);
   }
   body .links .add {
-    width: 60px;
+    width: 75%;
     height: 25px;
     font-size: 10px;
   }
   body .links .add {
-    width: 90%;
+    width: 74%;
     transition: 200ms;
   }
   body .links .add:hover {
@@ -1159,12 +1176,12 @@ body .graph {
     display: none;
   }
   body .links ul li p {
-    font-size: 10px;
-    min-width: 60px;
+    display: none;
   }
   body .links ul li a {
-    float: right;
-    margin: 0 15px 0 0;
+    display: block;
+    width: 100%;
+    margin: 0 30%;
     font-size: 8px;
     padding-top: 5px;
   }
@@ -1173,6 +1190,10 @@ body .graph {
   }
   body .pdata {
     width: calc(100% - 85px);
+  }
+  body .pdata .pdata-form {
+    width: 100%;
+    margin: 10px 0;
   }
   body .pdata .pdata-form p {
     font-size: 11px;
@@ -1260,25 +1281,23 @@ body .graph {
     border: 1px solid #F58220;
     color: #F58220;
   }
-  body ul li {
+  body .links ul li {
     max-width: 100%;
     margin: 0 50px;
   }
-  body ul li:hover svg {
+  body .links ul li:hover svg {
     display: none;
   }
-  body ul li p {
-    font-size: 10px;
-    min-width: 60px;
-    padding: 0;
+  body .links ul li p {
+    display: none;
   }
-  body ul li a {
-    float: right;
-    margin: 0;
+  body .links ul li a {
+    margin: 0 30%;
+    width: 100%;
     font-size: 8px;
     padding-top: 5px;
   }
-  body ul li a:hover svg {
+  body .links ul li a:hover svg {
     display: none;
   }
   .pdata {
