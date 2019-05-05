@@ -96,16 +96,18 @@
             transition: 300ms;
             .logo-bar {
                 .burger {
-                    transition: 300ms;
                     &.toggle {
                         .line1 {
-                            transform: rotate(-45deg) translate(-5px, 6px);
+                            transform: rotate(-45deg) translate(-5px, 5px);
+                            transition: 500ms;
                         }
                         .line2 {
                             opacity: 0;
+                            transition: 500ms;
                         }
                         .line3 {
-                            transform: rotate(45deg) translate(-5px, -6px);
+                            transform: rotate(45deg) translate(-5px, -5px);
+                            transition: 500ms;
                         }
                     }
                 }
@@ -219,6 +221,24 @@
         .side-navbar {
             margin-left: -140px;
             transition: 300ms;
+            .logo-bar {
+                .burger {
+                    &.toggle {
+                        .line1 {
+                            transform: rotate(-45deg) translate(-5px, 5px);
+                            transition: 500ms;
+                        }
+                        .line2 {
+                            opacity: 0;
+                            transition: 500ms;
+                        }
+                        .line3 {
+                            transform: rotate(45deg) translate(-5px, -5px);
+                            transition: 500ms;
+                        }
+                    }
+                }
+            }
             .sections {
                 border-bottom: 0;
                 .section {
@@ -350,6 +370,24 @@
         .side-navbar {
             margin-left: -140px;
             transition: 300ms;
+            .logo-bar {
+                .burger {
+                    &.toggle {
+                        .line1 {
+                            transform: rotate(-45deg) translate(-5px, 5px);
+                            transition: 500ms;
+                        }
+                        .line2 {
+                            opacity: 0;
+                            transition: 500ms;
+                        }
+                        .line3 {
+                            transform: rotate(45deg) translate(-5px, -5px);
+                            transition: 500ms;
+                        }
+                    }
+                }
+            }
             .sections {
                 border-bottom: 0;
                 .section {

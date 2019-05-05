@@ -927,6 +927,45 @@ body .graph {
   color: #F58220;
 }
 
+.pdata .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 30px;
+  display: none;
+}
+
+.pdata .overlay .modal {
+  max-width: 600px;
+  margin: auto;
+  background-color: #ffffff;
+  position: relative;
+  padding: 30px;
+  display: none;
+}
+
+.pdata .overlay .modal .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+}
+
+.pdata .overlay.show {
+  display: flex;
+}
+
+.pdata .overlay.show .modal {
+  display: block;
+}
+
 /*@media (min-width: 1400px) {
     .links {
         ul {
@@ -990,17 +1029,17 @@ body .graph {
     margin-left: -140px;
     transition: 300ms;
   }
-  body .side-navbar .logo-bar .burger {
-    transition: 300ms;
-  }
   body .side-navbar .logo-bar .burger.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 5px);
+    transition: 500ms;
   }
   body .side-navbar .logo-bar .burger.toggle .line2 {
     opacity: 0;
+    transition: 500ms;
   }
   body .side-navbar .logo-bar .burger.toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-5px, -5px);
+    transition: 500ms;
   }
   body .side-navbar .sections {
     border-bottom: 0;
@@ -1096,6 +1135,18 @@ body .graph {
   body .side-navbar {
     margin-left: -140px;
     transition: 300ms;
+  }
+  body .side-navbar .logo-bar .burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+    transition: 500ms;
+  }
+  body .side-navbar .logo-bar .burger.toggle .line2 {
+    opacity: 0;
+    transition: 500ms;
+  }
+  body .side-navbar .logo-bar .burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+    transition: 500ms;
   }
   body .side-navbar .sections {
     border-bottom: 0;
@@ -1207,6 +1258,18 @@ body .graph {
   body .side-navbar {
     margin-left: -140px;
     transition: 300ms;
+  }
+  body .side-navbar .logo-bar .burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+    transition: 500ms;
+  }
+  body .side-navbar .logo-bar .burger.toggle .line2 {
+    opacity: 0;
+    transition: 500ms;
+  }
+  body .side-navbar .logo-bar .burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+    transition: 500ms;
   }
   body .side-navbar .sections {
     border-bottom: 0;
