@@ -525,6 +525,12 @@ body {
         overflow: auto;
         padding: 30px;
         display: none;
+        &.show {
+            display: flex;
+            .modal {
+                display: block;
+            }
+        }
         .modal {
             max-width: 600px;
             margin: auto;
@@ -537,14 +543,6 @@ body {
                 top: 0;
                 right: 0;
                 padding: 5px 10px;
-            }
-        }
-    }
-    .overlay {
-        &.show {
-            display: flex;
-            .modal {
-                display: block;
             }
         }
     }
