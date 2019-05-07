@@ -745,7 +745,8 @@ body h2 {
 }
 
 body .earnings .chart {
-  width: 70%;
+  height: 160px;
+  width: 320px;
   display: block;
   margin: 20px auto;
 }

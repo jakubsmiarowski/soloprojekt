@@ -12,45 +12,6 @@ document.querySelector('.burger').addEventListener('click', function(event) {
     toggleMenu();
 });
 
-
-// modal
-
-// funkcja na otwarcie modala
-function openModal(modal) {
-    document.querySelectorAll('#overlay > *').forEach(function(modal) {
-        modal.classList.remove('show');
-    });
-    document.querySelector('#overlay').classList.add('show');
-    document.querySelector(modal).classList.add('show');
-};
-openModal('#myModal');
-console.log(openModal());
-
-document.getElementById('userOpenModal').addEventListener('click', openModal());
-
-// funkcja na zamkniecie modala
-function closeModal() {
-    overlay.classList.remove('show');
-};
-
-// przyciski na zamykanie modala
-
-// przyciski
-document.querySelectorAll('#overlay .js--close-modal').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        closeModal();
-    })
-});
-
-// tlo
-document.querySelector('#overlay').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closeModal();
-    }
-});
-
-
 // wykresy
 
 var ctx = document.getElementById('myChart').getContext('2d');
@@ -88,3 +49,43 @@ var chart = new Chart(ctx, {
         ]
     },
 });
+
+
+// modal
+
+// listener
+document.getElementById('userOpenModal').addEventListener('click', openModal());
+
+// funkcja na zamkniecie modala
+function closeModal() {
+    document.getElementById('overlay').classList.remove('show');
+};
+
+// przyciski na zamykanie modala
+
+// przyciski
+document.querySelectorAll('#overlay .js--close-modal').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        closeModal();
+    })
+});
+
+// tlo
+document.querySelector('#overlay').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeModal();
+    }
+});
+
+// funkcja na otwarcie modala
+function openModal(modal) {
+
+    document.querySelectorAll('#overlay > *').forEach(function(modal) {
+        modal.classList.remove('show');
+    });
+    var modal = document.getElementById('myModal');
+    document.getElementById('overlay').classList.add('show');
+    modal.classList.add('show');
+};
+console.log(openModal());
