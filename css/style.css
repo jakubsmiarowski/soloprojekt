@@ -928,7 +928,7 @@ body .earnings .chart {
   color: #F58220;
 }
 
-.pdata .overlay {
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -943,15 +943,15 @@ body .earnings .chart {
   display: none;
 }
 
-.pdata .overlay.show {
+.overlay.show {
   display: flex;
 }
 
-.pdata .overlay.show .modal {
+.overlay.show .modal {
   display: block;
 }
 
-.pdata .overlay .modal {
+.overlay .modal {
   max-width: 600px;
   margin: auto;
   background-color: #ffffff;
@@ -960,11 +960,49 @@ body .earnings .chart {
   display: none;
 }
 
-.pdata .overlay .modal .btn-close {
+.overlay .modal h1 {
+  color: #797979;
+  font-size: 15px;
+  width: 100%;
+  border-bottom: 1px solid #BCBCBC;
+  padding: 0 0 10px 10px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.overlay .modal input {
+  width: 200px;
+  padding: 15px;
+  margin: 15px 15px 20px 15px;
+}
+
+.overlay .modal .btn-close {
   position: absolute;
   top: 0;
   right: 0;
   padding: 5px 10px;
+  cursor: pointer;
+  color: #797979;
+}
+
+.overlay .modal button {
+  display: block;
+  margin: 20px auto;
+  background-color: #F58220;
+  border-radius: 5px;
+  width: 120px;
+  height: 45px;
+  color: #EDEDED;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.overlay .modal button:hover {
+  background-color: transparent;
+  border: 1px solid #F58220;
+  color: #F58220;
 }
 
 /*@media (min-width: 1400px) {
@@ -1129,6 +1167,13 @@ body .earnings .chart {
   }
   body .pdata .pdata-form input {
     margin: 3px 40px 0 25px;
+  }
+}
+
+@media (max-width: 590px) {
+  .overlay .modal input {
+    width: 100%;
+    margin: 15px 15px 20px 0;
   }
 }
 

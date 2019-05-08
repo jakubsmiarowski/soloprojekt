@@ -216,6 +216,17 @@
     }
 }
 
+@media (max-width: 590px) {
+    .overlay {
+        .modal {
+            input {
+                width: 100%;
+                margin: 15px 15px 20px 0;
+            }
+        }
+    }
+}
+
 @media (max-width: 500px) and (min-width:390px) {
     body {
         .side-navbar {

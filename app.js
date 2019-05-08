@@ -79,13 +79,14 @@ document.querySelector('#overlay').addEventListener('click', function(e) {
 });
 
 // funkcja na otwarcie modala
-function openModal(modal) {
 
+
+function openModal(modal) {
+    var modal = document.getElementById('myModal');
     document.querySelectorAll('#overlay > *').forEach(function(modal) {
         modal.classList.remove('show');
     });
-    var modal = document.getElementById('myModal');
+
     document.getElementById('overlay').classList.add('show');
     modal.classList.add('show');
 };
-console.log(openModal());
