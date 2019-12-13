@@ -480,6 +480,7 @@ body .top-bar .wallet {
   float: right;
   padding: 10px 20px;
   height: 100%;
+  transition: 200ms;
 }
 
 body .top-bar .wallet span {
@@ -493,6 +494,8 @@ body .top-bar .wallet span:hover {
 
 body .top-bar .wallet:hover {
   cursor: pointer;
+  background-color: #F5F5F2;
+  border-left: 3px solid #F58220;
 }
 
 body .top-bar .wallet .wallet-svg {

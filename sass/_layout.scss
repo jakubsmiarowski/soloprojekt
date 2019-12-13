@@ -119,6 +119,7 @@ body {
             float: right;
             padding: 10px 20px;
             height: 100%;
+            transition: 200ms;
             span {
                 float: left;
                 transition: 200ms;
@@ -128,6 +129,8 @@ body {
             }
             &:hover {
                 cursor: pointer;
+                background-color: $body-color;
+                border-left: 3px solid $orange;
             }
             .wallet-svg {
                 padding-bottom: 5px;
@@ -148,8 +151,11 @@ body {
             float: right;
             height: 100%;
             padding: 13px 20px;
+            transition: 200ms;
             &:hover {
                 cursor: pointer;
+                background-color: $body-color;
+                border-left: 3px solid $orange;
             }
         }
         .notification svg {
@@ -167,12 +173,15 @@ body {
             height: 100%;
             color: $user-blue;
             padding: 0 20px;
+            transition: 200ms;
             span {
                 float: left;
                 padding-top: 12px;
             }
             &:hover {
                 cursor: pointer;
+                background-color: $body-color;
+                border-left: 3px solid $orange;
             }
         }
         .user svg {
@@ -192,8 +201,11 @@ body {
             float: right;
             height: 100%;
             padding: 13px 20px;
+            transition: 200ms;
             &:hover {
                 cursor: pointer;
+                background-color: $body-color;
+                border-left: 3px solid $orange;
             }
         }
         .quit svg {
